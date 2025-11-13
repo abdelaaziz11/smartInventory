@@ -27,7 +27,7 @@ app.use('/api/orders', ordersRouter);
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', uptime: process.uptime(), timestamp: new Date().toISOString() });
 });
-app.use(errorHandler);
+//app.use(errorHandler);
 
 if (config.env === 'development') {
   app.use(morgan('dev')); // format court et coloré
